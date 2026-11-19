@@ -184,7 +184,7 @@ jobs:
           merge-multiple: true
       - name: Show what will be published
         run: ls -la artifacts
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           # For a tag push this is the pushed tag; for a manual run the tag is created on the current commit.
           tag_name: ${{ steps.tag.outputs.tag }}
