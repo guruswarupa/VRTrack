@@ -28,9 +28,9 @@ def crop_to_artwork(im: Image.Image) -> Image.Image:
     box = gray.getbbox()
     if not box:
         raise SystemExit("could not find the icon artwork in the source image")
-    l, t, r, b = box
-    side = max(r - l, b - t)
-    cx, cy = (l + r) // 2, (t + b) // 2
+    left, top, right, bottom = box
+    side = max(right - left, bottom - top)
+    cx, cy = (left + right) // 2, (top + bottom) // 2
     box = (cx - side // 2, cy - side // 2, cx - side // 2 + side, cy - side // 2 + side)
     return rgb.crop(box)
 

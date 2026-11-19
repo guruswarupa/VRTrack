@@ -117,6 +117,8 @@ jobs:
           IFS=. read -r MA MI PA <<< "${v%%[-+]*}"
           echo "name=$v" >> "$GITHUB_OUTPUT"
           echo "code=$((MA * 1000000 + MI * 1000 + PA))" >> "$GITHUB_OUTPUT"
+      - name: Make the Gradle wrapper executable
+        run: chmod +x android/gradlew
       - name: Unit tests
         working-directory: android
         run: ./gradlew --no-daemon testDebugUnitTest

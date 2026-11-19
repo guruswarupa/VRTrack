@@ -1,14 +1,14 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "vrtrack"
 dynamic = ["version"]
 description = "Phone head-tracking companion for OpenTrack (sim racing)"
-readme = "../README.md"
+readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "MIT" }
+license = "MIT"
 dependencies = ["PySide6>=6.6"]
 
 [project.optional-dependencies]

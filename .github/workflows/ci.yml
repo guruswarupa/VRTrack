@@ -73,6 +73,8 @@ jobs:
       - name: Fetch face model
         working-directory: .
         run: python tools/fetch_model.py
+      - name: Make the Gradle wrapper executable (the bit is lost when committed from Windows)
+        run: chmod +x gradlew
       - name: Unit tests
         run: ./gradlew --no-daemon testDebugUnitTest
       - name: Lint

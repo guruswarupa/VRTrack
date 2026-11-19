@@ -8,13 +8,9 @@
 phone itself; a small desktop app feeds the result to [OpenTrack](https://github.com/opentrack/opentrack), which makes
 it work in games like Euro Truck Simulator 2 — no game mods, no dedicated hardware.
 
-```
- Android phone                         Windows / Linux PC
-┌──────────────────┐    UDP over     ┌───────────────┐        ┌───────────┐       ┌──────┐
-│ camera → MediaPipe│  Wi-Fi or USB  │ VRTrack       │  UDP   │ OpenTrack │ FreeTrack │ Game │
-│ face → head pose  │ ─────────────▶ │ tune + smooth │ ─────▶ │ (UDP in)  │ ────────▶ │      │
-└──────────────────┘   tethering     └───────────────┘ :4242  └───────────┘       └──────┘
-```
+<p align="center">
+  <img src="docs/images/architecture.png" alt="Phone camera to VRTrack to OpenTrack to your game" width="900">
+</p>
 
 - **Private.** Video is processed on the phone and never stored or uploaded. Only pose numbers cross your local network.
   No accounts, ads, analytics or internet needed.
