@@ -1,0 +1,7 @@
+{
+  "version": "2026.1.0",
+  "url": "https://github.com/opentrack/opentrack/releases/download/opentrack-2026.1.0/opentrack-2026.1.0-win32-setup.exe",
+  "sha256": "9ec2b9f45bbcc190c92187d15f91c59c6c0bf1be8b2fafb7fa38b78a2588fd5d",
+  "license": "ISC",
+  "source": "https://github.com/opentrack/opentrack"
+}

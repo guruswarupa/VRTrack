@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+venv/
+
+# Build output
+installer/build/
+pc/build/
+pc/dist/
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# Large downloaded model: fetch with `python tools/fetch_model.py`
+android/app/src/main/assets/face_landmarker.task
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

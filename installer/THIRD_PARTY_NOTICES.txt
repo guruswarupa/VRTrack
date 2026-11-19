@@ -1,0 +1,18 @@
+VRTrack bundles or installs the following third-party software. Each remains under its own licence.
+
+OpenTrack  (installed by the VRTrack installer, unmodified official release)
+  https://github.com/opentrack/opentrack
+  Licence: ISC. Copyright the OpenTrack authors. The OpenTrack installer shows its full licence text
+  and it is also available in the opentrack source repository.
+
+PySide6 / Qt for Python  (VRTrack desktop app)
+  https://www.qt.io/qt-for-python
+  Licence: LGPL-3.0 (with GPL/commercial alternatives). The Qt libraries are shipped as separate
+  files in the application folder and can be replaced by a compatible build.
+
+Python
+  https://www.python.org/  Licence: PSF-2.0
+
+Android app dependencies
+  MediaPipe Tasks Vision (Apache-2.0), AndroidX CameraX / Jetpack Compose / Kotlin (Apache-2.0).
+  The Face Landmarker model (face_landmarker.task) is provided by Google under the Apache-2.0 licence.
