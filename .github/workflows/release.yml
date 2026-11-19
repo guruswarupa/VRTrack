@@ -178,7 +178,7 @@ jobs:
       - name: Release tag
         id: tag
         run: echo "tag=v${VERSION#v}" >> "$GITHUB_OUTPUT"
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           path: artifacts
           merge-multiple: true
