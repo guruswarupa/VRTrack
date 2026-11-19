@@ -83,9 +83,9 @@ git push origin v0.2.0
 ```
 
 The workflow stamps the version into the desktop app (`tools/set_version.py`) and the APK (`-PversionName`,
-`-PversionCode = major·10⁶ + minor·10³ + patch`), then attaches everything to the release. To rehearse without
-publishing, run the *Release* workflow manually from the Actions tab with a version number: it builds the artifacts but
-does not create a release.
+`-PversionCode = major·10⁶ + minor·10³ + patch`), then attaches everything to the release. You can also run the *Release*
+workflow manually from the Actions tab with a version number: it builds everything, creates the tag `vX.Y.Z` on the
+current commit and publishes the release the same way. All three platform jobs must succeed before anything is published.
 
 ### Android signing
 
