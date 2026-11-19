@@ -5,10 +5,11 @@ import time
 
 import pytest
 
-pytest.importorskip("PySide6")
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
-
-from PySide6.QtWidgets import QApplication  # noqa: E402
+try:
+    from PySide6.QtWidgets import QApplication
+except ImportError as e:   # PySide6 missing, or its system libraries (e.g. libEGL) are not installed
+    pytest.skip(f"Qt not usable here: {e}", allow_module_level=True)
 
 from vrtrack import protocol as P  # noqa: E402
 from vrtrack.controller import Controller  # noqa: E402
